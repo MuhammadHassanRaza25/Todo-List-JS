@@ -1,69 +1,70 @@
 body{
     font-family: sans-serif;
-    background-color: #222831;
+    background: linear-gradient(to right, #33ccff 0%, #ff99cc 82%);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 5%;
+}
+.itemsdiv{
+    border: 2px solid black;
+    box-shadow: 1px 1px 5px black;
+    background-color: white;
+    width: 55%;
+    padding: 10px;
+    border-radius: 15px;
 }
 .todoHeading{
-    color: white;
-    width: 35%;
+    color: black;
     text-align: center;
     font-size: 30px;
     border-radius: 15px;
 }
-.itemsdiv{
-    border: 2px solid black;
-    background-color: white;
-    width: 50%;
-    padding: 15px;
-    border-radius: 15px;
-}
-.inputdiv{
+.inputbtndiv{
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
+  margin-top: 10%;
 }
-.inputdiv input{
-    margin-top: 3%;
-    width: 50%;
-    padding: 17px;
+.inputbtndiv input{
+    width: 380px;
     font-size:20px;
-    border-radius: 10px;
-    background-color: #1c2129;
-    color: white;
-    border: 2px solid white;
+    font-weight: bold;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: white;
+    color: black;
 }
-.inputdiv input:focus{
+.inputbtndiv input:focus{
    outline: none;
 }
-.inputdiv input::placeholder{
-    color: white;
+.inputbtndiv input::placeholder{
+    color: black;
 }
-.inputdiv input:focus::placeholder{
+.inputbtndiv input:focus::placeholder{
+   color: rgb(202, 2, 2);
    padding-left: 7px;
    transition: all 0.5s;
 }
-.inputdiv button{
-    width: 17%;
-    height: 60px;
-    margin-top: 3%;
-    font-size: 20px;
-    margin-left: 1%;
-    border-radius: 10px;
-    background-color: #1c2129;
-    color: white;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: all 0.5s;
+.btndiv{
+    display: flex;
+    gap: 10px;
 }
-.inputdiv button:hover{
-    background-color: white;
-    border: 2px solid #222831;
-    color: #222831;
-    transition: all 0.5s;
+.btndiv button{
+    border: none;
+    padding: 10px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, rgb(232, 12, 12) 0%,rgb(202, 2, 2) 82%);
+    color: white;
+    cursor: pointer;
+}
+.btndiv button:hover{
+    font-weight: bold;
+    transform: scale(1.03);
 }
 .listdiv{
     display: flex;
@@ -71,35 +72,112 @@ body{
     justify-content: center;
 }
 #ul li{
-    border: 2px solid white;
-    background: #1c2129;
+    background: rgb(236, 235, 235);
+    color: black;
+    list-style: none;
     border-radius: 10px;
-    color: #fff;
     font-size: x-large;
+    font-weight: bold;
     width: 85%;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 2%;
     margin-top: 3%;
 }
 #ul li button{
-    border-radius: 10px;
-    background-color: #1c2129;
+    border: none;
+    padding: 10px;
+    width: 130px;
+    font-size: 20px;
+    border-radius: 30px;
+    background: linear-gradient(to right, rgb(232, 12, 12) 0%,rgb(202, 2, 2) 82%);
     color: white;
-    border: 2px solid white;
     cursor: pointer;
-    font-size: large;
-    padding: 5px;
-    width: 20%;
-    transition: all 0.5s;
 }
 #ul li button:hover{
-    background-color: white;
-    color: #222831;
+    font-weight: bold;
+    transform: scale(1.03);
+}
+/* check & uncheck */
+ul li{
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(Images/uncheck.png);
+    background-size: cover;
+    background-position:center ;
+    top: 22px;
+    left: 10px;
+}
+ul li.checked::before{
+    background-image: url(Images/check-removebg-preview.png);
+}
+/* check & uncheck */
+#copyright{
+    color: black;
+    text-align: center;
+}
+/* edit input */
+#editInput::placeholder{
+    color: rgb(202, 2, 2);
+    font-weight: bold;
+    padding-left: 5px;
     transition: all 0.5s;
 }
-#copyright{
-    color: white;
+
+/* RESPONSIVENESS START */
+
+@media (max-width:1024px) {
+    .itemsdiv{
+        width: 100%;
+        margin-top: 10%;
+    }
 }
+@media (max-width:669px){
+    .itemsdiv{
+        margin-top: 7%;
+    }
+    .inputbtndiv input{
+        margin-bottom: 5%;
+    }
+    #ul li{
+        width:100% ;
+        margin-left: -6%;
+    }
+}
+@media (max-width:669px){
+    .btndiv button{
+        width: 100px;
+        font-size: 15px;
+    }
+    #ul li button{
+        width: 100px;
+        font-size: 15px;
+    }
+}
+@media (max-width:412px){
+    .todoHeading{
+        font-size: 20px;
+    }
+    .itemsdiv{
+        margin-top: 14%;
+    }
+    #ul li{
+        width:100% ;
+        margin-left: -10%;
+        font-size: 15px;
+    }
+    .btndiv button{
+       margin-bottom: 5%;
+    }
+}
+/* RESPONSIVENESS END */

@@ -9,23 +9,26 @@
 </head>
 <body>
     
-    <div class="todoHeading" data-aos="fade-down">
-        <h1>Todo List</h1>
-    </div>
-
    <div class="itemsdiv">
-      <div class="inputdiv">
+    <div class="todoHeading">
+      <h1 data-aos="zoom-in">Todo <span style="color: rgb(232, 12, 12);">List</span></h1>
+     </div>
+     <!-- BUTTONS & INPUT -->
+       <div class="inputbtndiv">
          <input type="text" id="input" placeholder="Enter Your Todo">
-              <button id="btn">Add</button>
-              <button id="delAll">Delete All</button>
+            <div class="btndiv">
+                <button id="btn">Add</button>
+                <button id="delAll">Delete All</button>
+            </div>
        </div>
+       <!-- BUTTONS & INPUT -->
        <div class="listdiv">
          <ul id="ul">
+
          </ul>
+         <h4 id="copyright" data-aos="zoom-in">CopyRight &#169; 2024 By Muhammad Hassan Raza</h4>
        </div>
    </div>
-
-   <h4 id="copyright" data-aos="fade-up">CopyRight &#169; 2024 By Muhammad Hassan Raza</h4>
 
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>
