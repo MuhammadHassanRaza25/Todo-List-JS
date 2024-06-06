@@ -85,7 +85,7 @@ body{
     border-radius: 10px;
     font-size: x-large;
     font-weight: bold;
-    width: 90%;
+    width: 95%;
     padding: 15px;
     display: flex;
     justify-content: center;
@@ -93,6 +93,7 @@ body{
     gap: 10px;
     margin-bottom: 2%;
     margin-top: 3%;
+    margin-left: -3%;
 }
 #ul li button{
     border: none;
