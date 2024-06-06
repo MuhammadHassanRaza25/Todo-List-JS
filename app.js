@@ -15,11 +15,6 @@ if(input.value == ''){
    ul.prepend(li)  // prepand se new value opper ati rhe gi.
    input.value = ''
 
-   // Check & Uncheck Funtionality
-   li.addEventListener('click',()=>{
-      li.setAttribute('class','checked')
-   })
-
    // delete button start
    var Delbutton = document.createElement('button')
    var DelbtnText = document.createTextNode('Delete')
@@ -39,10 +34,10 @@ if(input.value == ''){
 
    Editbutton.addEventListener('click',()=>{
     // wohi input hai or wohi button hai bas button ki value change ki hai.
-    // or input ko new id deke css se style kia hai.
-    input.setAttribute('id','editInput')
+    input.value = ul.childNodes[0].childNodes[0].nodeValue
     button.innerText = 'Save'
-
+    //console.log(ul.childNodes[0].childNodes[0].nodeValue);
+    //ul ka childNode li. again .childNodes .nodeValue means li text.
     button.addEventListener('click',()=>{
       li.style.display = 'none'
       li.innerText = `${input.value}`
