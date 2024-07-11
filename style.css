@@ -79,6 +79,11 @@ body{
     justify-content: center;
 }
 #ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background: rgb(243, 242, 242);
     color: black;
     list-style: none;
@@ -87,18 +92,15 @@ body{
     font-weight: bold;
     width: 95%;
     padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     margin-bottom: 2%;
     margin-top: 3%;
-    margin-left: -3%;
+    margin-left: -2.5%;
+    overflow-x: scroll;
 }
 #ul li button{
     border: none;
-    padding: 12px;
-    width: 130px;
+    padding: 10px;
+    width: 125px;
     font-size: 20px;
     border-radius: 30px;
     background: linear-gradient(to right, rgb(232, 12, 12) 0%,rgb(202, 2, 2) 82%);

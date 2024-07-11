@@ -5,7 +5,10 @@ var delAll = document.getElementById('delAll')
 
 button.addEventListener('click', ()=>{
 if(input.value == ''){
-  alert('Please Fill This Input Field!')
+  Swal.fire({
+    title: "Please Fill This Input Field!",
+    icon: "info"
+  });
   li.style.display = 'none'
 }
 
